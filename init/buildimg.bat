@@ -1,4 +1,5 @@
 @echo off
 echo Building image...
-ImageFileBuilder floppy.img 1474560 boot.bin init.bin emptyfs.bin emptydir.bin emptyclusters.bin
+ImageFileBuilder init.bin 32256 k.bin
+ImageFileBuilder floppy.img 1474560 boot.bin k.bin emptyfs.bin emptydir.bin emptyclusters.bin
 echo Done.

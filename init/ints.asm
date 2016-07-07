@@ -294,8 +294,3 @@ _nixcallgate:
 	pop eax
 	call _InterruptHandler
 	iret
-
-_Interrupt dd 0xFFFFFFFF
-
-_InterruptHandler:
-ret
