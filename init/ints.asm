@@ -2,7 +2,7 @@
 ; interrupt handler assembly code
 ;
 
-%include "c:\os\intnums.inc"
+%include "intnums.inc"
 
 _int0:
 	push eax

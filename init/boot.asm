@@ -85,7 +85,7 @@ call puts
 
 jmp loadprg
 
-%include "c:\init\io16.asm"
+%include "io16.asm"
 
 retrycount dw 0x0000
 
