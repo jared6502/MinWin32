@@ -24,4 +24,7 @@ times 348 dq -1
 
 ;eat up the remaining unused entries
 ;fill them with a known value to indicate unusable entries
-times 140 dq 0xA5A5A5A5A5A5A5A5
+times 136 dq 0xA5A5A5A5A5A5A5A5
+
+;pointer to next fs table section (null since this is the one and only section)
+nextfsentry dq 0,0, 0,0
