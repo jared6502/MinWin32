@@ -39,7 +39,7 @@ startmsg db 'Running init...',13,10,0
 haltmsg db 'System halted.',13,10,0
 
 ;include required BIOS-based support functions
-%include "io16.asm"
+%include "c:\init\io16.asm"
 
 ;------------------------------------------------------------------
 ; start of pmode code
@@ -51,7 +51,17 @@ haltmsg db 'System halted.',13,10,0
 [bits 32]
 %endif
 
-%include "ints.asm"
+%include "c:\init\ints.asm"
+
+_LoadGDT:
+lgdt 0x0000:0x00030000
+ret;
+
+_LoadLDT:
+ret;
+
+_LoadIDT:
+ret;
 
 ;pad resulting image to 32k - 512
 times 32256 - ($-$$) db 0
